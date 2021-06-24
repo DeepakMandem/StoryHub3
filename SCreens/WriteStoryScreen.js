@@ -19,6 +19,7 @@ export default class WriteStoryScreen extends React.component() {
     }
 
     submitStory = () => {
+      ToastAndroid.show(ToastAndroid.SHORT);
       Alert.alert("The story was submitted");
     }
 
@@ -33,22 +34,30 @@ export default class WriteStoryScreen extends React.component() {
 
         <TextInput
           style={styles.inputBox}
+          
           onChangeText={text => {
+            this.setState({
             
+            })
+          }}
+          value={this.state.text}
+          
+        />
+        <TextInput
+          style={styles.inputBox}
+          onChangeText={text => {
+            this.setState({
+            
+            })
           }}
           value={this.state.text}
         />
         <TextInput
           style={styles.inputBox}
           onChangeText={text => {
+            this.setState({
             
-          }}
-          value={this.state.text}
-        />
-        <TextInput
-          style={styles.inputBox}
-          onChangeText={text => {
-            
+            })
           }}
           value={this.state.text}
         />
